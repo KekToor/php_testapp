@@ -23,10 +23,10 @@ Route::get('/', function () {
 });
 
 
-Route::get('/products/{id}', function($id){
-    return view('product',[
-        'product' => Product::find($id)
-    ]);
-});
+//Route::get('/products/{id}', function($id){
+//    return view('product',[
+//        'product' => Product::find($id)
+//    ]);
+//});
 
 
