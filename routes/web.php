@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use League\CommonMark\Extension\CommonMark\Node\Block\Heading;
@@ -16,11 +17,7 @@ use App\Models\Product;
 |
 */
 
-Route::get('/', function () {
-    return view('products',[
-        'products' => Product::all()
-    ]);
-});
+Route::get('/', [ProductController::class, 'index']);
 
 
 //Route::get('/products/{id}', function($id){

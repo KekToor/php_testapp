@@ -10,10 +10,10 @@ class Product extends Model
     use HasFactory;
 
     public function manufacturer(){
-        return $this->belongsTo(Manufacturer::class);
+        return $this->belongsTo(Manufacturer::class, 'manufacturers_id');
     }
 
     public function parttype(){
-        return $this->belongsTo(Parttype::class);
+        return $this->belongsTo(Parttype::class, 'parttypes_id');
     }
 }

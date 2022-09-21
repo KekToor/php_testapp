@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('price');
             $table->unsignedBigInteger('manufacturers_id');
             $table->unsignedBigInteger('parttypes_id');
-            $table->longText('desc');
+            $table->longText('desc')->nullable();
             $table->string('barcode');
             $table->timestamps();
             $table->foreign('manufacturers_id')->references('id')->on('manufacturers')->onDelete('cascade');
