@@ -45,6 +45,29 @@
 
         @endunless
     </div>
+{{--    <div class="row">--}}
+{{--        <nav aria-label="Page navigation example" class="d-flex justify-content-center">--}}
+{{--            <div class="col-5"></div>--}}
+{{--            <ul class="pagination">--}}
+{{--                <li class="page-item">--}}
+{{--                    <a class="page-link text-decoration-none text-dark" href="#" aria-label="Previous">--}}
+{{--                        <span aria-hidden="true">&laquo; Prev</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                <li class="page-item">--}}
+{{--                    <a class="page-link text-decoration-none text-dark" href="#" aria-label="Next">--}}
+{{--                        <span aria-hidden="true">Next &raquo;</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--            </ul>--}}
+{{--            <div class="col-5"></div>--}}
+{{--        </nav>--}}
+{{--    </div>--}}
+
+    <div class="mt-5 p-4">
+        {{$products->links()}}
+    </div>
+
 
 @endsection
 {{--@unless (count($products) == 0)--}}

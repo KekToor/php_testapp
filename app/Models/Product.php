@@ -9,6 +9,11 @@ class Product extends Model
 {
     use HasFactory;
 
+    public function scopeFilter($query, array $filters)
+    {
+
+    }
+
     public function manufacturer(){
         return $this->belongsTo(Manufacturer::class, 'manufacturers_id');
     }
