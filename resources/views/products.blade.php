@@ -16,7 +16,7 @@
                     @unless(count($manufacturers) == 0)
 
                         @foreach($manufacturers as $manufacturer)
-                            <option>{{$manufacturer->manufacturer_name}}</option>
+                            <option value="{{$manufacturer->id}}">{{$manufacturer->manufacturer_name}}</option>
                         @endforeach
 
                     @endunless
@@ -29,7 +29,7 @@
                     @unless(count($parttypes) == 0)
 
                         @foreach($parttypes as $parttype)
-                            <option>{{$parttype->parttype_name}}</option>
+                            <option value="{{$parttype->id}}">{{$parttype->parttype_name}}</option>
                         @endforeach
 
                     @endunless
