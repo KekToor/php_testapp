@@ -17,7 +17,7 @@ use App\Models\Product;
 |
 */
 
-Route::get('/', [ProductController::class, 'index']);
+Route::get('/', [ProductController::class, 'index'])->name('index');
 
 
 //Route::get('/products/{id}', function($id){

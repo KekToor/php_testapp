@@ -24,17 +24,20 @@
                 </select>
             </div>
             <div class="col-5">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Kategorie (Všechny)</option>
-                    @unless(count($parttypes) == 0)
+                <form method="get" action="{{route('index')}}" id="search-form">
+                    <select class="form-select" name="selectedParttypeId">
+                        <option selected>Kategorie (Všechny)</option>
+                        @unless(count($parttypes) == 0)
 
-                        @foreach($parttypes as $parttype)
-                            <option>{{$parttype->parttype_name}}</option>
-                        @endforeach
+                            @foreach($parttypes as $parttype)
+                                <option value="{{$parttype->id}}" <?php if ($selectedParttypeId == $parttype->id){echo 'selected';} ?>>{{$parttype->parttype_name}}</option>
+                            @endforeach
 
-                    @endunless
+                        @endunless
 
-                </select>
+                    </select>
+                </form>
+
             </div>
         </div>
         @unless(count($products) == 0)
@@ -45,9 +48,9 @@
 
         @endunless
     </div>
-    <div class="mt-5 p-4">
-        {{$products->links()}}
-    </div>
+{{--    <div class="mt-5 p-4">--}}
+{{--        {{$products->links()}}--}}
+{{--    </div>--}}
 
 
 @endsection
