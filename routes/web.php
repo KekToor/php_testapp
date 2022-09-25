@@ -19,6 +19,8 @@ use App\Models\Product;
 
 Route::get('/', [ProductController::class, 'index'])->name('index');
 
+Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+
 
 //Route::get('/products/{id}', function($id){
 //    return view('product',[
